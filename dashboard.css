@@ -1,0 +1,66 @@
+
+:root {
+  --lavender: #e8def8;
+  --purple: #8a70b5;
+  --purple-dark: #665084;
+  --teal: #d9f0eb;
+  --teal-dark: #397f78;
+  --page: #f8f7fc;
+  --surface: rgba(255, 255, 255, 0.88);
+  --text: #37364b;
+  --muted: #77768a;
+  --border: rgba(127, 111, 157, 0.16);
+  --radius: 24px;
+  --shadow: 0 8px 28px rgba(79, 62, 110, 0.06);
+}
+
+body {
+  background-color: var(--page);
+  color: var(--text);
+}
+
+.dashboard-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.network-wallpaper {
+  position: relative;
+  isolation: isolate;
+}
+
+.network-wallpaper::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.13;
+  background-image:
+    radial-gradient(circle at 18px 18px, #9b8ac2 1.2px, transparent 1.8px),
+    linear-gradient(30deg, transparent 49.5%, #b2a4d0 49.8%, #b2a4d0 50.2%, transparent 50.5%);
+  background-size: 52px 52px, 104px 104px;
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
+}
+
+.page-title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  margin: 0;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.sidebar-transition {
+  transition: width 180ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-transition {
+    transition: none;
+  }
+}

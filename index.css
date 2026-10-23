@@ -1,0 +1,41 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: "Avenir Light", Avenir, "Segoe UI", sans-serif;
+  color: #37364b;
+  background: #f8f7fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+.display-heading {
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+}
